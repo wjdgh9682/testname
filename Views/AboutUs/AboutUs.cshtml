@@ -1,0 +1,44 @@
+﻿
+
+@{
+    ViewData["Title"] = "AboutUs";
+}
+
+<h2>About Us</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Role
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+                Jeongho Yoo
+            </td>
+            <td>
+                This is Sport event organisation page. Please enjoy!
+            </td>
+            <td>
+                Admin
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

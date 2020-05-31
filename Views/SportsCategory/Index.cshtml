@@ -1,0 +1,56 @@
+﻿@model IEnumerable<SportsCategory>
+
+@{
+    ViewData["Title"] = "Sport Categories";
+}
+
+<h2>Sport Categories</h2>
+
+<table class="table" id="SportsCategory">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Duration(min)
+            </th>
+            <th>
+                Capacity
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="id_@item.Id" class="@item.Name">
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Description
+                </td>
+                <td>
+                    @item.Duration
+                </td>
+                <td>
+                    @item.Capacity
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Join</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

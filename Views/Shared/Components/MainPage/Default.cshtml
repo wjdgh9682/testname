@@ -1,0 +1,15 @@
+﻿@model IEnumerable<SportsCategory>
+
+@foreach (var item in Model)
+{
+    @if (item.Name != "home")
+    {
+        <li class="nav-item">
+            <a class="navbar-link text-dark" asp-area="" asp-controller="Pages" asp-action="Page"
+               asp-route-name="@item.Name">@item.Name</a>
+        </li>
+    }
+
+}
+
+<!--asp-controller="Pages" asp-action="Page"-->
